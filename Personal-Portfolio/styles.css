@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background: #080808;
+    color: white;
+}
+
+.light-mode {
+
+    background: rgb(255, 250, 236);
+    color: black;
+
+    .subtitle {
+        color: black;
+    }
+
+    .skills-list div {
+        background-color: #f3eddc;
+        border: 2px solid black;
+    }
+
+    .layer {
+        color: white;
+    }
+
+    transition: 0.5s ease-in-out;
+
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1; /* appears above everything else as you scroll */
+    padding: 10px 10%;
+    background-color: #252323;
+    mix-blend-mode: difference;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #82d6f1;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* LIGHT/DARK MODE BUTTON */
+
+#mode-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+}
+
+#mode-switch img {
+    height: 5vh;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #82d6f1;
+}
+
+/* About Section */
+
+#about {
+    padding: 80px 0;
+    scroll-margin-top: 100px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #82d6f1;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #40a6c8;
+    font-size: 14px;
+}
+
+/* make tab contents invisble by default */
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block; /* make Skills tab visible */
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 0;
+    scroll-margin-top: 120px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+
+.project {
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #3fb7e0);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project:hover .layer {
+    height: 100%;
+}
+
+/* Skills Section */
+#skills {
+    padding: 30px 0;
+    scroll-margin-top: 120px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.skills-list div {
+    background: #262626;
+    padding: 37px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.skills-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.skills-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.skills-list div:hover {
+    background: #3fb7e0;
+    transform: translateY(-10px);
+}
+
+/* Contact Section */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+/* Contact Icons */
+
+.contact-icons {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-icons div {
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icons svg {
+    height: 32px;
+}
+
+/* Email button */
+
+/* The icon labels that will pop up */
+.contact-icons .mail::before {
+    content: attr(data-icons);
+    position: absolute;
+    color: white;
+    background-color: var(--accent-color);
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateX(170px);
+    opacity: 1; /* make invisible */
+    transition: transform 200ms ease-in-out;
+}
+
+.contact-icons .mail:hover::before {
+    transform: translateX(200px) scale(1.2);
+}
+
+.contact-icons .mail:hover {
+    background-color: var(--accent-color);
+    fill: white;
+} 
+
+/* Triangle under the icon labels */
+.contact-icons .mail::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    /* We don't include border-top because a triangle is just a square missing an edge */
+    border-right: 10px solid var(--accent-color);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    transform: translateX(45px);
+    opacity: 1;
+    transition: transform 200ms ease-in-out;
+}
+
+.contact-icons .mail:hover::after {
+    transform: translateX(50px) scale(1.2);
+}
+
+/* Phone button */
+
+/* The icon labels that will pop up */
+.contact-icons .phone::before {
+    content: attr(data-icons);
+    position: absolute;
+    color: white;
+    background-color: var(--accent-color);
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateX(118px);
+    opacity: 1; /* make invisible */
+    transition: transform 200ms ease-in-out;
+}
+
+.contact-icons .phone:hover::before {
+    transform: translateX(138px) scale(1.2);
+}
+
+.contact-icons .phone:hover {
+    background-color: var(--accent-color);
+    fill: white;
+} 
+
+/* Triangle under the icon labels */
+.contact-icons .phone::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    /* We don't include border-top because a triangle is just a square missing an edge */
+    border-right: 10px solid var(--accent-color);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    transform: translateX(45px);
+    opacity: 1;
+    transition: transform 200ms ease-in-out;
+}
+
+.contact-icons .phone:hover::after {
+    transform: translateX(50px) scale(1.2);
+}
+
+/* Social Icons */
+
+.social-icons {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.social-icons a svg {
+    height: 32px;
+}
+
+/* The icon labels that will pop up */
+.social-icons a::before {
+    content: attr(data-icons);
+    position: absolute;
+    color: white;
+    background-color: var(--accent-color);
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(30px) rotate(-25deg);
+    opacity: 0; /* make invisible */
+    transition: 300ms cubic-bezier(0.26,-0.48, 0.27, 1.92);
+}
+
+.social-icons a:hover::before {
+    transform: translateY(65px) rotate(0);
+    opacity: 1;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    fill: white;
+} 
+
+/* Triangle under the icon labels */
+.social-icons a::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    /* We don't include border-top because a triangle is just a square missing an edge */
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(-25deg);
+    opacity: 0;
+    transition: 300ms cubic-bezier(0.26,-0.48, 0.27, 1.92);
+}
+
+.social-icons a:hover::after {
+    transform: translateY(45px) rotate(0);
+    opacity: 1;
+}
+
+/* Footer Section */
+#footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+#footer p {
+    text-align: center;
+    color: #ababab;
+    font-weight: 100;
+}

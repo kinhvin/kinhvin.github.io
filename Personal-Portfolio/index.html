@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Portfolio Website - Kevin Truong</title>
+    <script src="https://kit.fontawesome.com/c3fe759890.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+    <nav>
+        
+        <a href="#">
+            <img src=".//src/White-Text-Logo.png" class="logo">
+        </a>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="mode-switch" onclick="toggleAppearance()">
+            <img src="src/light-mode.png">
+            <img src="src/dark-mode.png">
+        </button>
+
+    </nav>
+</div>
+    
+<div id="header">
+    <div class="container">
+
+        <div class="header-text">
+            <p>Aspiring Developer</p>
+            <h1>Hey, I'm <span>Kevin Truong</span></h1>
+            <button class="cv">
+                Download CV
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="src/Me.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>
+                    Hi! My name is Kevin and I'm an aspiring developer with a high interest in web development, 
+                    AI and machine learning and Cybersecurity. I'm currently in my 2nd year of studying Computer 
+                    Science at Carleton University. As of now I'm exploring my options and learning web
+                    development on the side for both fun and to strengthen my tech stack. I look to consistently
+                    update and add to this web portfolio as I grow as a developer, learn new things and make more
+                    projects!
+                </p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills-tab')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience-tab')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education-tab')">Education</p>
+                </div>
+
+                <!-- Skills -->
+                <div class="tab-contents active-tab" id="skills-tab">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing aesthetic user-friendly web app interfaces</li>
+                        <li><span>Web Development</span><br>Developing intuitive web applications</li>
+                        <li><span>Software Development</span><br>Creating applications that can help users with certain tasks</li>
+                    </ul>
+                </div>
+
+                <!-- Experience -->
+                <div class="tab-contents" id="experience-tab">
+                    <ul>
+                        <li><span>Oct. 2024 - Present</span><br>Currently working on a job application tracker web application in a team of five that implements the MERN stack</li>
+                        <li><span>Oct. 18 - Oct. 19, 2024</span><br>Participated in a Hackathon lead by the Carleton Computer Science Society (CCSS) where I worked with 
+                            with two others to revamp the Carleton web portal; Carleton Central through various front-end, back-end and even security related
+                        coding challenges</li>
+                        <li><span>May 2024 - Present</span><br>Designing and developing a website for a local Vietnamese desserts business using HTML, CSS and JavaScript</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="tab-contents" id="education-tab">
+                    <ul>
+                        <li><span>Sep. 2023 - Present</span><br>B.C.S. Honours Computer Science, Co-op @ Carleton University, 2nd Year Standing</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="src/To-Do-List.png">
+                <div class="layer">
+                    <h3>To-Do List</h3>
+                    <p>This To-Do list features auto-saving of tasks and a simple, aesthetic visual layout.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="src/Five-Nights-At-Kermz.png">
+                <div class="layer">
+                    <h3>Five Nights at Kermz Game</h3>
+                    <p>This is a game I pair-programmed in Java for my final summative project in grade 12. 
+                        It is a clone of the famous game "Five Nights at Freddy" (FNAF), except with a few of our own touches and coded from scratch using the
+                    Model-View-Controller (MVC) framework.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="src/BlackLineFollower.png">
+                <div class="layer">
+                    <h3>Black-Line Following Robot</h3>
+                    <p>A black-line following robot that I programmed using a PIC microcontroller with MPLABX, which uses C as its programming language. 
+                        This was built completely from scratch and was created for my grade 12 computer engineering class (2022 - 2023).</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="src/TrafficLightSim.png">
+                <div class="layer">
+                    <h3>Traffic Light Simulator</h3>
+                    <p>A traffic light simulator I created all the way in grade 11 (2021 - 2022) for my computer engineering class. It features the standard traffic light sequences, pedestrian signals and even railway crossing signals. 
+                        It was programmed using a PIC microcontroller with MPLABX which utilizes C as its programming language.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Skills Section -->
+<div id="skills">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+
+            <!-- Skill 1 -->
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Software Development</h2>
+                <p>I am able to design and create software that can satisfy specific user needs.</p>
+            </div>
+
+            <!-- Skill 2 -->
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Web Development</h2>
+                <p>I have the ability to develop intuitive, user-friendly web applications for different purposes.</p>
+            </div>
+
+            <div>
+                <h2>Languages & Frameworks</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quis modi cum. Atque aliquid quasi beatae eos, 
+                    qui ut impedit, optio facere amet vitae mollitia non sed corrupti, a sapiente.</p>
+            </div>
+
+            <div>
+                <h2>Soft & Hard Skills</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic labore culpa vero dolorum tempore qui ut enim officiis perspiciatis voluptate a reprehenderit, 
+                    voluptatibus provident expedita molestias cumque, consequuntur similique ab?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+
+                <!-- Email -->
+                <a href="mailto:kevintruong.inbox@gmail.com">
+                    <div class="contact-icons">
+                        <div class="mail" data-icons="kevintruong.inbox@gmail.com" style="--accent-color: #f2a60c;">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                        </div>
+                </a>
+
+                <!-- Phone -->
+                    <div class="phone" data-icons="(416) 319-5304" style="--accent-color: #f7760c;">
+                        <svg id="phone-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                    </div>
+
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-icons">
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/kinhvin" data-icons="GitHub" style="--accent-color: #2dba4e;" target="_blank">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/kevin-truong-cs" data-icons="LinkedIn" style="--accent-color: #0077B5 ;" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                        </svg>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@kevintruongcodes" data-icons="YouTube" style="--accent-color: #CD201F;" target="_blank">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="contact-right">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div id="footer">
+    <!-- <p>© Copyright 2025 Kevin Truong. All rights reserved.</p> -->
+     <p>This is the footer.</p>
+</div>
+
+<!-- JavaScript -->
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+
+        // Hide the current link
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        } // end of 
+        
+        // Hide the current tab
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        } // end of for
+
+        // Set the new active link
+        event.currentTarget.classList.add("active-link");
+
+        // Display the contents
+        document.getElementById(tabname).classList.add("active-tab");
+
+    } // end of opentab function
+
+    function toggleAppearance() {
+
+        const myImg = document.getElementById("mode-img");
+
+        if (myImg.src = "src/light-mode.png") {
+            myImg.src = "src/dark-mode.png"
+        }
+
+        else {
+            myImg.src = "src/light-mode.png";
+        }
+
+        document.body.classList.toggle("light-mode");
+    }
+
+ </script>
+
+
+</body>
+</html>
